@@ -1,0 +1,6 @@
+{
+  "gemini": {
+    "api_key": "YOUR_GEMINI_API_KEY",
+    "project_id": "YOUR_GCP_PROJECT_ID",
+  }
+}

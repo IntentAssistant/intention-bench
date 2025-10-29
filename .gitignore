@@ -1,0 +1,8 @@
+code/api_config.json
+dataset/images/
+dataset/annotations/mixed_sessions/raw_jsons/
+logs/
+results/
+__pycache__/
+*.pyc
+/dataset
