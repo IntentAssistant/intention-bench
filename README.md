@@ -51,10 +51,10 @@ See `dataset/README.md` for detailed documentation of the file layout.
    (Provide `requirements.txt` according to your environment.)
 
 3. **Configure API access**
-   - Copy `intention_bench/code/api_config.example.json` to `api_config.json`.
+   - Copy `intention-bench/code/api_config.example.json` to `api_config.json`.
    - Fill in your Gemini API key, GCP project ID, and preferred location.
    ```bash
-   cp intention_bench/code/api_config.example.json intention_bench/code/api_config.json
+   cp code/api_config.example.json code/api_config.json
    ```
 
 4. **Download the dataset from Hugging Face**
