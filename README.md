@@ -1,7 +1,7 @@
 # IntentionBench Code Repository
 
 This repository hosts the scripts used to collect, synthesize, and evaluate the **IntentionBench** dataset introduced in the paper  
-_“State Your Intention to Steer Your Attention: An AI Assistant for Intentional Digital Living.”_
+_[“State Your Intention to Steer Your Attention: An AI Assistant for Intentional Digital Living.”](https://arxiv.org/abs/2510.14513)_
 
 The dataset itself is published on Hugging Face. Clone this repo for the tooling, then download the data from Hugging Face and place it under `intention_bench/dataset/` following the structure described below.
 
@@ -27,7 +27,7 @@ intention_bench/
 
 The raw images and synthesized JSON files are **not** tracked in GitHub. After downloading them from Hugging Face, place them in:
 
-- `intention_bench/dataset/images/`
+- `intention_bench/dataset/images/` (created by unzipping `images.zip`)
 - `intention_bench/dataset/annotations/mixed_sessions/raw_jsons/`
 
 See `dataset/README.md` for detailed documentation of the file layout.
@@ -59,12 +59,15 @@ See `dataset/README.md` for detailed documentation of the file layout.
 
 4. **Download the dataset from Hugging Face**
    ```bash
-   huggingface-cli download juheonch/intention-bench \
+   hf download juheonch/intention_bench annotations \
      --repo-type dataset \
-     --local-dir intention_bench/dataset \
-     --force-download
+     --local-dir intention_bench/dataset/annotations
+
+   hf download juheonch/intention_bench images.zip --repo-type dataset
+   unzip images.zip -d intention_bench/dataset/images
+   rm images.zip
    ```
-   Ensure that `images/` and `annotations/mixed_sessions/raw_jsons/` are populated after the download.
+   After extraction, the directory layout matches the paths referenced by the mixed-session JSON files.
 
 ---
 
