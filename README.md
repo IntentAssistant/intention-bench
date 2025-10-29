@@ -59,13 +59,9 @@ See `dataset/README.md` for detailed documentation of the file layout.
 
 4. **Download the dataset from Hugging Face**
    ```bash
-   hf download juheonch/intention_bench annotations \
-     --repo-type dataset \
-     --local-dir intention_bench/dataset/annotations
-
-   hf download juheonch/intention_bench images.zip --repo-type dataset
-   unzip images.zip -d intention_bench/dataset/images
-   rm images.zip
+   hf download juheonch/intention_bench \
+  --repo-type dataset \
+  --local-dir ./dataset
    ```
    After extraction, the directory layout matches the paths referenced by the mixed-session JSON files.
 
