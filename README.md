@@ -15,7 +15,7 @@ The dataset itself is published on Hugging Face. Clone this repo for the tooling
 ```
 intention_bench/
 ├── code/
-│   ├── analysis.py              # end-to-end evaluation pipeline
+│   ├── analysis.py              # evaluation pipeline
 │   ├── bulid_mixed_sessions.py    # synthesizes mixed sessions
 │   ├── screen_capture_tool.py     # GUI for recording focused sessions
 │   ├── utils/                     # shared helpers (dataset loading, metrics, logging)
@@ -68,7 +68,7 @@ See `dataset/README.md` for detailed documentation of the file layout.
 
 ---
 
-## Running the End-to-End Evaluation
+## Running the Evaluation
 
 ```bash
 python intention_bench/code/analysis.py \
